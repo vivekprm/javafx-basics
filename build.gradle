@@ -32,4 +32,4 @@ test {
     useJUnitPlatform()
 }
 
-mainClassName = 'pojoBindings.BindingsSelectApp'
+mainClassName = 'fxanimation.AnimationApp'
