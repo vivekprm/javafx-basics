@@ -1,0 +1,35 @@
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
+}
+
+/**
+ * We add the required modules. For instance, if we only need the javafx.controls module, we will include
+ * only javafx.controls.
+ * Transitive dependencies are automatically resolved (for instance, there is no need to add a dependency
+ * for the javafx.graphics module, since it is transitively resolved by the javafx.controls module).
+ *
+ * But if your application is using FXML, you will need to add the javafx.fxml module as well.
+ */
+javafx {
+    version = "11.0.2"
+    modules = [ 'javafx.controls' ]
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+mainClassName = 'pojoBindings.BindingsSelectApp'
